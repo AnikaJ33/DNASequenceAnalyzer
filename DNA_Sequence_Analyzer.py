@@ -1,13 +1,20 @@
 """"
 DNA Sequence Analyzer
 This project involves creating a program that can analyze DNA sequences. 
-1. Read DNA sequences from a file or accept user input.
+1. Read DNA sequences from a fasta file or accept user input.
 Calculate basic statistics like GC content and sequence length.
 Find and count specific nucleotide patterns or motifs.
 Transcribe DNA to RNA.
 Translate RNA to amino acid sequences.
 Enter multiple DNA sequences and find common motifs between the sequences
 Make a hidden MARKOV model
+DNA Sequence Analyzer
+Core Features to Implement:
+Start with basic sequence operations - reading FASTA files, calculating GC content (percentage of G and C nucleotides), and finding complement/reverse complement sequences. Then add sequence validation to check for invalid nucleotides and basic pattern matching to find specific motifs or restriction enzyme sites.
+Intermediate Challenges:
+Build a codon translator that converts DNA to amino acid sequences using the genetic code. Add reading frame analysis to find all possible protein sequences in different frames. Create a simple mutation detector that compares two sequences and identifies differences.
+Advanced Extensions:
+Implement ORF (Open Reading Frame) finding to locate potential genes, add basic sequence alignment for comparing related sequences, or create a primer design tool for PCR applications.
 """
 
 #Take user input of a DNA sequence
