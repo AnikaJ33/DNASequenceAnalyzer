@@ -17,6 +17,7 @@ Advanced Extensions:
 Implement ORF (Open Reading Frame) finding to locate potential genes, add basic sequence alignment for comparing related sequences, or create a primer design tool for PCR applications.
 """
 import argparse
+from pathlib import Path
 
 #Take user input of a DNA sequence
 def read_fasta(file_path):
@@ -29,9 +30,11 @@ def read_fasta(file_path):
 def main():
     parser = argparse.ArgumentParser(prog="DNA Sequence Analyzer",
                                      description="Analyze DNA sequences from a FASTA file or user input.")
-    parser.add_argument('-f','--file',type=str, help="Path to the FASTA file containing DNA sequences.")
-    parser.add_argument('-i','--input',action='strore_true', help="Accept user input for DNA sequence.")
+    parser.add_argument('fasta',type=Path, help="Path to the FASTA file containing DNA sequences.")
+    parser.add_argument('-i','--input',action='store_true', help="Accept user input for DNA sequence.")
     args = parser.parse_args()
+
+    result = read_fasta(args.fasta)
 
 if __name__ == "__main__":
     main()
